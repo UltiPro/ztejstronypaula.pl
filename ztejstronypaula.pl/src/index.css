@@ -1,5 +1,161 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-body {
-  margin: 0;
+@theme {
+	--color-bone: #efe9e4;
+	--color-bone-2: #e5ded5;
+	--color-ink: #231f20;
+	--color-umber: #5e5343;
+	--color-muted: #665f54;
+	--color-terracotta: #8f4e24;
+	--color-clay: #d9a47c;
+	--color-forest: #39423b;
+	--color-line: #cfc7bc;
+
+	--font-serif: Constantia, 'Palatino Linotype', Palatino, 'Iowan Old Style', 'Book Antiqua', Georgia, serif;
+	--font-sans: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+
+	--ease-brand: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@layer base {
+	:root {
+		scroll-behavior: smooth;
+		/* keeps anchor targets clear of the fixed header */
+		scroll-padding-top: 5.5rem;
+	}
+
+	body {
+		margin: 0;
+		background-color: var(--color-bone);
+		color: var(--color-ink);
+		font-family: var(--font-sans);
+		font-size: 1rem;
+		line-height: 1.7;
+		font-synthesis: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		overflow-x: hidden;
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-family: var(--font-serif);
+		font-weight: 400;
+		color: var(--color-umber);
+		letter-spacing: -0.02em;
+		text-wrap: balance;
+		margin: 0;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--color-terracotta);
+		outline-offset: 3px;
+		border-radius: 2px;
+	}
+
+	::selection {
+		background: var(--color-terracotta);
+		color: #fff;
+	}
+}
+
+@layer components {
+	.section {
+		padding-block: clamp(4.5rem, 10vw, 8.5rem);
+	}
+
+	.section-tight {
+		padding-block: clamp(3rem, 7vw, 5.5rem);
+	}
+
+	.wrap {
+		max-width: 75rem;
+		margin-inline: auto;
+		padding-inline: clamp(1.25rem, 5vw, 3rem);
+	}
+
+	.no-scrollbar {
+		scrollbar-width: none;
+	}
+
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Scroll-triggered reveal. The resting state lives here rather than in
+     Tailwind classes so the element cannot flash before the observer
+     attaches. */
+	.reveal {
+		opacity: 0;
+		transform: translateY(1.375rem);
+	}
+
+	.reveal-in {
+		opacity: 1;
+		transform: none;
+		transition:
+			opacity 0.9s var(--ease-brand),
+			transform 0.9s var(--ease-brand);
+	}
+
+	/* Slow camera push on the hero — settles once and stays. */
+	.animate-slow-zoom {
+		animation: slow-zoom 22s var(--ease-brand) forwards;
+	}
+
+	.animate-pulse-line {
+		animation: pulse-line 2.6s var(--ease-brand) infinite;
+	}
+}
+
+@keyframes slow-zoom {
+	from {
+		transform: scale(1.09);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes pulse-line {
+	0%,
+	100% {
+		transform: scaleY(1);
+		opacity: 0.85;
+	}
+
+	50% {
+		transform: scaleY(0.55);
+		opacity: 0.35;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	:root {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+	}
+
+	.reveal {
+		opacity: 1;
+		transform: none;
+	}
 }
