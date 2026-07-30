@@ -1,0 +1,25 @@
+{
+	"id": "./",
+	"name": "z tej strony Paula",
+	"short_name": "Paula",
+	"description": "Sesje kobiece, rodzinne, pary, wieczory panieńskie i śluby oraz fotografia taneczna. Warszawa, Trójmiasto, Ełk i okolice.",
+	"lang": "pl",
+	"start_url": "./",
+	"display": "standalone",
+	"theme_color": "#8F4E24",
+	"background_color": "#EFE9E4",
+	"icons": [
+		{
+			"src": "./icon-192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "./icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	]
+}

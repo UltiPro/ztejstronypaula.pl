@@ -1,13 +1,70 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ztejstronypaula.pl</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description"
+		content="Sesje kobiece, rodzinne, pary, wieczory panieńskie i śluby oraz fotografia taneczna. Warszawa, Trójmiasto, Ełk i okolice." />
+
+	<!-- Kolejnosc nieprzypadkowa: przegladarki rozumiejace SVG wezma drugi wpis,
+         starsze zatrzymaja sie na .ico. Odwrotna kolejnosc psuje Safari. -->
+	<link rel="icon" href="/favicon.ico" sizes="32x32" />
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<meta name="theme-color" content="#8F4E24" />
+
+	<title>z tej strony Paula — fotografia Warszawa, Trójmiasto, Ełk</title>
+
+	<noscript>
+		<style>
+			.nojs {
+				padding: 4rem 2rem;
+				text-align: center;
+				font-family: Constantia, Palatino, Georgia, serif;
+				background-color: #efe9e4;
+				color: #231f20;
+			}
+
+			.nojs h1 {
+				margin: 0 0 1rem;
+				font-size: 1.75rem;
+				font-weight: normal;
+				color: #8f4e24;
+			}
+
+			.nojs p {
+				margin: 0 0 0.5rem;
+				color: #665f54;
+			}
+
+			.nojs a {
+				color: #8f4e24;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body>
+	<noscript>
+		<div class="nojs">
+			<h1>z tej strony Paula</h1>
+			<p>
+				Do wyświetlenia zdjęć potrzebny jest JavaScript. Włącz go albo
+				napisz do mnie bezpośrednio:
+			</p>
+			<p>
+				<a href="mailto:ztejstronypaula@gmail.com">ztejstronypaula@gmail.com</a>
+			</p>
+			<p>
+				<a href="https://www.instagram.com/ztejstronypaula/">@ztejstronypaula</a>
+			</p>
+		</div>
+	</noscript>
+
+	<div id="root"></div>
+	<script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

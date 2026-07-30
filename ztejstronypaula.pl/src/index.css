@@ -11,8 +11,11 @@
 	--color-forest: #39423b;
 	--color-line: #cfc7bc;
 
-	--font-serif: Constantia, 'Palatino Linotype', Palatino, 'Iowan Old Style', 'Book Antiqua', Georgia, serif;
-	--font-sans: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+	--font-serif:
+		Constantia, 'Palatino Linotype', Palatino, 'Iowan Old Style', 'Book Antiqua',
+		Georgia, serif;
+	--font-sans:
+		'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
 
 	--ease-brand: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
