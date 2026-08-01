@@ -1,0 +1,483 @@
+/**
+ * PLIK GENEROWANY — nie edytuj ręcznie.
+ *
+ * Powstaje z folderów w "ztejstronypaula.pl scripts/images/" przez:
+ *     cd "ztejstronypaula.pl scripts" && python build_site_images.py
+ *
+ * Kształt odpowiada strukturze tamtego folderu, więc miejsce zdjęcia na
+ * stronie widać po samej ścieżce. `ratio` to prawdziwe proporcje pliku, nie
+ * założone — dzięki temu mozaika galerii układa się z rzeczywistych wymiarów,
+ * a przeglądarka rezerwuje dokładnie tyle miejsca, ile zdjęcie zajmie po
+ * wczytaniu.
+ */
+
+export type GalleryCategory = 'women' | 'family' | 'couples' | 'bridal' | 'dance';
+
+export type GeneratedPhoto = {
+	id: string;
+	path: string;
+	widths: number[];
+	width: number;
+	height: number;
+	ratio: string;
+};
+
+export type GeneratedImages = {
+	hero: { landscape: GeneratedPhoto | null; portrait: GeneratedPhoto | null };
+	offer: Record<GalleryCategory, GeneratedPhoto | null>;
+	gallery: Record<GalleryCategory, GeneratedPhoto[]>;
+	about: GeneratedPhoto | null;
+	cta: GeneratedPhoto | null;
+	instagram: GeneratedPhoto[];
+};
+
+export const IMAGES: GeneratedImages = {
+	hero: {
+		landscape: {
+			id: 'hero-desktop',
+			path: 'images/1-glowne/poziome/sesja-slubna-17',
+			widths: [1280, 1920, 2560, 3840],
+			width: 3840,
+			height: 2560,
+			ratio: '3840/2560',
+		},
+		portrait: {
+			id: 'hero-mobile',
+			path: 'images/1-glowne/pionowe/22',
+			widths: [1080, 1440],
+			width: 1440,
+			height: 2560,
+			ratio: '1440/2560',
+		},
+	},
+	offer: {
+		women: {
+			id: 'offer-women',
+			path: 'images/2-oferta/kobiece/natalia-studio-3',
+			widths: [500, 800],
+			width: 800,
+			height: 1200,
+			ratio: '800/1200',
+		},
+		family: {
+			id: 'offer-family',
+			path: 'images/2-oferta/rodzinne/asia-i-rodzinka-12',
+			widths: [500, 800],
+			width: 800,
+			height: 1200,
+			ratio: '800/1200',
+		},
+		couples: {
+			id: 'offer-couples',
+			path: 'images/2-oferta/pary/ania-kacper',
+			widths: [500, 1000],
+			width: 1000,
+			height: 1500,
+			ratio: '1000/1500',
+		},
+		bridal: {
+			id: 'offer-bridal',
+			path: 'images/2-oferta/panienskie-i-sluby/panienski-22-06-24-15',
+			widths: [500, 1000],
+			width: 1000,
+			height: 1500,
+			ratio: '1000/1500',
+		},
+		dance: {
+			id: 'offer-dance',
+			path: 'images/2-oferta/taneczne/plenum-38',
+			widths: [500, 800],
+			width: 800,
+			height: 1200,
+			ratio: '800/1200',
+		},
+	},
+	gallery: {
+		women: [
+			{
+				id: '3-galeria/kobiece/julia',
+				path: 'images/3-galeria/kobiece/julia',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/kobiece/julia-50',
+				path: 'images/3-galeria/kobiece/julia-50',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/kobiece/julia-51',
+				path: 'images/3-galeria/kobiece/julia-51',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/kobiece/julia-54',
+				path: 'images/3-galeria/kobiece/julia-54',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/kobiece/julia-7',
+				path: 'images/3-galeria/kobiece/julia-7',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/kobiece/martyna-10',
+				path: 'images/3-galeria/kobiece/martyna-10',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/kobiece/martyna-11',
+				path: 'images/3-galeria/kobiece/martyna-11',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/kobiece/martyna-16',
+				path: 'images/3-galeria/kobiece/martyna-16',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/kobiece/martyna-27',
+				path: 'images/3-galeria/kobiece/martyna-27',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/kobiece/martyna-28',
+				path: 'images/3-galeria/kobiece/martyna-28',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/kobiece/martyna-29',
+				path: 'images/3-galeria/kobiece/martyna-29',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+		],
+		family: [
+			{
+				id: '3-galeria/rodzinne/asia-i-rodzinka-11',
+				path: 'images/3-galeria/rodzinne/asia-i-rodzinka-11',
+				widths: [400, 800],
+				width: 800,
+				height: 1200,
+				ratio: '800/1200',
+			},
+			{
+				id: '3-galeria/rodzinne/asia-i-rodzinka-13',
+				path: 'images/3-galeria/rodzinne/asia-i-rodzinka-13',
+				widths: [400, 800],
+				width: 800,
+				height: 1200,
+				ratio: '800/1200',
+			},
+			{
+				id: '3-galeria/rodzinne/asia-i-rodzinka-15',
+				path: 'images/3-galeria/rodzinne/asia-i-rodzinka-15',
+				widths: [400, 800],
+				width: 800,
+				height: 1200,
+				ratio: '800/1200',
+			},
+			{
+				id: '3-galeria/rodzinne/asia-i-rodzinka-2',
+				path: 'images/3-galeria/rodzinne/asia-i-rodzinka-2',
+				widths: [400, 800, 819],
+				width: 819,
+				height: 1200,
+				ratio: '819/1200',
+			},
+			{
+				id: '3-galeria/rodzinne/asia-i-rodzinka-20',
+				path: 'images/3-galeria/rodzinne/asia-i-rodzinka-20',
+				widths: [400, 800],
+				width: 800,
+				height: 1200,
+				ratio: '800/1200',
+			},
+			{
+				id: '3-galeria/rodzinne/asia-i-rodzinka-3',
+				path: 'images/3-galeria/rodzinne/asia-i-rodzinka-3',
+				widths: [400, 789],
+				width: 789,
+				height: 1200,
+				ratio: '789/1200',
+			},
+			{
+				id: '3-galeria/rodzinne/asia-i-rodzinka-35',
+				path: 'images/3-galeria/rodzinne/asia-i-rodzinka-35',
+				widths: [400, 800],
+				width: 800,
+				height: 1200,
+				ratio: '800/1200',
+			},
+			{
+				id: '3-galeria/rodzinne/asia-i-rodzinka-6',
+				path: 'images/3-galeria/rodzinne/asia-i-rodzinka-6',
+				widths: [400, 800],
+				width: 800,
+				height: 1200,
+				ratio: '800/1200',
+			},
+			{
+				id: '3-galeria/rodzinne/asia-i-rodzinka-9',
+				path: 'images/3-galeria/rodzinne/asia-i-rodzinka-9',
+				widths: [400, 800],
+				width: 800,
+				height: 1200,
+				ratio: '800/1200',
+			},
+			{
+				id: '3-galeria/rodzinne/martyna-sesja-brzuszkowa-12',
+				path: 'images/3-galeria/rodzinne/martyna-sesja-brzuszkowa-12',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/rodzinne/martyna-sesja-brzuszkowa-15',
+				path: 'images/3-galeria/rodzinne/martyna-sesja-brzuszkowa-15',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 1600,
+				ratio: '2400/1600',
+			},
+			{
+				id: '3-galeria/rodzinne/martyna-sesja-brzuszkowa-2',
+				path: 'images/3-galeria/rodzinne/martyna-sesja-brzuszkowa-2',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/rodzinne/martyna-sesja-brzuszkowa-26',
+				path: 'images/3-galeria/rodzinne/martyna-sesja-brzuszkowa-26',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/rodzinne/martyna-sesja-brzuszkowa-3',
+				path: 'images/3-galeria/rodzinne/martyna-sesja-brzuszkowa-3',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 1600,
+				ratio: '2400/1600',
+			},
+			{
+				id: '3-galeria/rodzinne/martyna-sesja-brzuszkowa-33',
+				path: 'images/3-galeria/rodzinne/martyna-sesja-brzuszkowa-33',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/rodzinne/martyna-sesja-brzuszkowa-38',
+				path: 'images/3-galeria/rodzinne/martyna-sesja-brzuszkowa-38',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/rodzinne/martyna-sesja-brzuszkowa-9',
+				path: 'images/3-galeria/rodzinne/martyna-sesja-brzuszkowa-9',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+		],
+		couples: [
+			{
+				id: '3-galeria/pary/ania-kacper',
+				path: 'images/3-galeria/pary/ania-kacper',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/pary/ania-kacper-10',
+				path: 'images/3-galeria/pary/ania-kacper-10',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/pary/ania-kacper-18',
+				path: 'images/3-galeria/pary/ania-kacper-18',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/pary/ania-kacper-3',
+				path: 'images/3-galeria/pary/ania-kacper-3',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 1600,
+				ratio: '2400/1600',
+			},
+			{
+				id: '3-galeria/pary/ania-kacper-6',
+				path: 'images/3-galeria/pary/ania-kacper-6',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 1600,
+				ratio: '2400/1600',
+			},
+			{
+				id: '3-galeria/pary/ania-kacper-9',
+				path: 'images/3-galeria/pary/ania-kacper-9',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 1600,
+				ratio: '2400/1600',
+			},
+		],
+		bridal: [
+			{
+				id: '3-galeria/panienskie-i-sluby/panienski-22-06-24-10',
+				path: 'images/3-galeria/panienskie-i-sluby/panienski-22-06-24-10',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/panienskie-i-sluby/panienski-22-06-24-11',
+				path: 'images/3-galeria/panienskie-i-sluby/panienski-22-06-24-11',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 1600,
+				ratio: '2400/1600',
+			},
+			{
+				id: '3-galeria/panienskie-i-sluby/panienski-22-06-24-12',
+				path: 'images/3-galeria/panienskie-i-sluby/panienski-22-06-24-12',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/panienskie-i-sluby/panienski-22-06-24-15',
+				path: 'images/3-galeria/panienskie-i-sluby/panienski-22-06-24-15',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/panienskie-i-sluby/panienski-22-06-24-16',
+				path: 'images/3-galeria/panienskie-i-sluby/panienski-22-06-24-16',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/panienskie-i-sluby/panienski-22-06-24-18',
+				path: 'images/3-galeria/panienskie-i-sluby/panienski-22-06-24-18',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/panienskie-i-sluby/panienski-22-06-24-23',
+				path: 'images/3-galeria/panienskie-i-sluby/panienski-22-06-24-23',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/panienskie-i-sluby/panienski-22-06-24-24',
+				path: 'images/3-galeria/panienskie-i-sluby/panienski-22-06-24-24',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/panienskie-i-sluby/panienski-22-06-24-28',
+				path: 'images/3-galeria/panienskie-i-sluby/panienski-22-06-24-28',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+			{
+				id: '3-galeria/panienskie-i-sluby/panienski-22-06-24-8',
+				path: 'images/3-galeria/panienskie-i-sluby/panienski-22-06-24-8',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 1600,
+				ratio: '2400/1600',
+			},
+			{
+				id: '3-galeria/panienskie-i-sluby/panienski-22-06-24-9',
+				path: 'images/3-galeria/panienskie-i-sluby/panienski-22-06-24-9',
+				widths: [400, 800, 1200, 1600, 2400],
+				width: 2400,
+				height: 3600,
+				ratio: '2400/3600',
+			},
+		],
+		dance: [],
+	},
+	about: {
+		id: 'about-portrait',
+		path: 'images/4-o-mnie/ja1',
+		widths: [600, 1200],
+		width: 1200,
+		height: 1500,
+		ratio: '1200/1500',
+	},
+	cta: {
+		id: 'cta-band',
+		path: 'images/5-pasmo-cta/ania-kacper-9',
+		widths: [1280, 1920, 2880],
+		width: 2880,
+		height: 1440,
+		ratio: '2880/1440',
+	},
+	instagram: [],
+};
