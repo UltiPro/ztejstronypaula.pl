@@ -13,19 +13,28 @@ type Props = {
 	onClick?: () => void;
 };
 
-const base =
-	'inline-flex items-center justify-center gap-2 rounded-[2px] border px-7 py-4 ' +
-	'font-sans text-sm font-semibold uppercase leading-none tracking-[0.1em] ' +
-	'no-underline transition-[background-color,color,border-color,transform] duration-300 ' +
-	'ease-brand hover:-translate-y-0.5 cursor-pointer';
+const base = cx(
+	'inline-flex cursor-pointer items-center justify-center gap-2',
+	'rounded-[2px] border px-7 py-4 no-underline',
+	'font-sans text-sm font-semibold uppercase leading-none tracking-[0.1em]',
+	'transition-[background-color,color,border-color,transform] duration-300',
+	'ease-brand hover:-translate-y-0.5',
+);
 
 const variants: Record<Variant, string> = {
 	solid: 'border-transparent bg-terracotta text-white hover:bg-ink',
-	outline:
-		'border-line bg-transparent text-umber hover:border-umber hover:bg-bone-2',
-	light: 'border-white/60 bg-transparent text-white backdrop-blur-[2px] hover:border-white hover:bg-white hover:text-ink',
-	onForest:
-		'border-bone/40 bg-transparent text-bone hover:border-clay hover:bg-clay hover:text-forest',
+	outline: cx(
+		'border-line bg-transparent text-umber',
+		'hover:border-umber hover:bg-bone-2',
+	),
+	light: cx(
+		'border-white/60 bg-transparent text-white backdrop-blur-[2px]',
+		'hover:border-white hover:bg-white hover:text-ink',
+	),
+	onForest: cx(
+		'border-bone/40 bg-transparent text-bone',
+		'hover:border-clay hover:bg-clay hover:text-forest',
+	),
 };
 
 export function Button({

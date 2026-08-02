@@ -42,7 +42,8 @@ export function LanguageSwitcher({ onPhoto, className }: Props) {
 								dictionaries[code].meta.name,
 							)}
 							className={cx(
-								'cursor-pointer border-0 bg-transparent p-1 font-sans text-xs font-semibold uppercase tracking-[0.14em]',
+								'cursor-pointer border-0 bg-transparent p-1',
+								'font-sans text-xs font-semibold uppercase tracking-[0.14em]',
 								'transition-colors duration-300 ease-brand',
 								onPhoto
 									? active
