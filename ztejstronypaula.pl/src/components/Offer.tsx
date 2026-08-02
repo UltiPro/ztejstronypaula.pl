@@ -70,11 +70,7 @@ export function Offer() {
 
 									<span
 										aria-hidden="true"
-										className="absolute inset-0"
-										style={{
-											backgroundImage:
-												'linear-gradient(180deg, rgb(35 31 32 / 0) 38%, rgb(35 31 32 / 0.28) 62%, rgb(35 31 32 / 0.82) 100%)',
-										}}
+										className="scrim-card absolute inset-0"
 									/>
 
 									<span className="absolute inset-x-0 bottom-0 grid gap-1.5 p-4">

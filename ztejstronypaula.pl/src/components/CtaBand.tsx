@@ -21,14 +21,7 @@ export function CtaBand() {
 				<Photo slot={ctaBandImage} fill sizes="100vw" position="50% 15%" />
 			</div>
 
-			<div
-				aria-hidden="true"
-				className="absolute inset-0 -z-10"
-				style={{
-					backgroundImage:
-						'linear-gradient(180deg, rgb(28 25 22 / 0.74), rgb(28 25 22 / 0.58) 50%, rgb(28 25 22 / 0.78))',
-				}}
-			/>
+			<div aria-hidden="true" className="scrim-cta absolute inset-0 -z-10" />
 
 			<Reveal className="grid max-w-[40ch] justify-items-center gap-6">
 				<h2
